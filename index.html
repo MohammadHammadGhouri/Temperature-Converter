@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <h1 style="text-align: center;">Temperature Converter</h1>
+    <form action="" style="margin: 0 auto; display: table;">
+        <h2 style="text-align: center;">Fahrenheit to Celcius</h2>
+        <input type="number" placeholder="Fahrenheit" id=f1 oninput="ftoc(this.value);"><span style="margin: 0 10px;">to</span>
+        <input type="number" placeholder="celcius" id="c1">
+        <h2 style="text-align: center;">Celcius to Fahrenheit</h2>
+        <input type="number" placeholder="celcius" id=c2 oninput="ctof(this.value)"><span style="margin: 0 10px;">to</span>
+        <input type="number" placeholder="Fahrenheit" id="f2">
+    </form>
+
+    <body>
+        <script>
+            function ftoc(f1value) {
+
+                f1value = parseFloat(f1value);
+                console.log(f1value)
+                document.getElementById("c1").value = (f1value - 32) / 1.8;
+            }
+
+            function ctof(c2value) {
+
+                f1value = parseFloat(c2value);
+                console.log(c2value)
+                document.getElementById("f2").value = 32 + c2value * 9 / 5;
+            }
+        </script>
+    </body>
+
+</html>
